@@ -53,6 +53,15 @@
             border-radius: 8px;
             color: white;
         }
+
+        h2{
+            color: #df572a;
+        }
+
+        #botao{
+            border-radius: 15px;
+        }
+
     </style>
 </head>
 
@@ -62,7 +71,7 @@
     <div class="container container-centralizado">
 
         <div class="quiz-container">
-            <h2 class="text-center">QUIZ DE INVESTIMENTO PERSONALIZADO</h2>
+            <h2 class="text-center"><b>MEU INVESTIMENTO PERSONALIZADO</b></h2>
 
             <br>
 
@@ -96,7 +105,7 @@
                         <label class="form-check-label" for="q1f">F) Criar uma reserva de emergência</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 2 -->
                 <div class="question">
                     <h4>2. Qual é o seu nível de tolerância ao risco?</h4>
@@ -120,7 +129,7 @@
                         <label class="form-check-label" for="q2d">D) Muito baixo, não quero correr nenhum risco</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 3 -->
                 <div class="question">
                     <h4>3. Por quanto tempo pretende deixar seu dinheiro investido?</h4>
@@ -141,7 +150,7 @@
                         <label class="form-check-label" for="q3d">D) Mais de 5 anos</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 4 -->
                 <div class="question">
                     <h4>4. Você prefere investir em algo que:</h4>
@@ -166,7 +175,7 @@
                             garantido</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 5 -->
                 <div class="question">
                     <h4>5. Como você se sentiria se seus investimentos perdessem 20% do valor em um curto período?</h4>
@@ -190,7 +199,7 @@
                         <label class="form-check-label" for="q5d">D) Não consigo imaginar aceitar essa perda</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 6 -->
                 <div class="question">
                     <h4>6. O que você considera mais importante ao investir?</h4>
@@ -207,7 +216,7 @@
                         <label class="form-check-label" for="q6c">C) Alto retorno, aceitando o risco necessário</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 7 -->
                 <div class="question">
                     <h4>7. Qual é o seu nível de conhecimento sobre investimentos?</h4>
@@ -224,7 +233,7 @@
                         <label class="form-check-label" for="q7c">C) Avançado, entendo bem sobre o assunto</label>
                     </div>
                 </div>
-
+                <br>
                 <!-- Pergunta 8 -->
                 <div class="question">
                     <h4>8. Com que frequência você gostaria de revisar seus investimentos?</h4>
@@ -243,7 +252,7 @@
                     </div>
                 </div>
 
-                <button class="mt-4" onclick="calcularResultado()">Finalizar Quiz</button>
+                <button id="botao" class="mt-4" onclick="calcularResultado()">Finalizar Quiz</button>
             </div>
 
             <!-- Resultado -->
@@ -280,11 +289,11 @@
             // Definir o resultado com base no score
             let resultado;
             if (score <= 10) {
-                resultado = "Você é um Investidor Conservador!";
+                window.location.href = 'conservador.html';
             } else if (score <= 16) {
-                resultado = "Você é um Investidor Moderado!";
+                window.location.href = 'moderado.html';
             } else {
-                resultado = "Você é um Investidor Arrojado!";
+                window.location.href = 'arrojado.html';
             }
 
             // Exibir o resultado
